@@ -9,14 +9,17 @@
 <body>
     <h1>Lights Out Game</h1>
     <div id="controls">
-        <button class="grid-size-btn" data-size="3">3x3 Grid</button>
-        <button class="grid-size-btn" data-size="4">4x4 Grid</button>
-        <button class="grid-size-btn" data-size="5">5x5 Grid</button>
-        <button id="reset-btn">Reset</button>
-        <p>Moves: <span id="move-counter">0</span></p>
+        <button class="grid-size-btn" data-size="3">Easy</button>
+        <button class="grid-size-btn" data-size="4">Medium</button>
+        <button class="grid-size-btn" data-size="5">Hard</button>
     </div>
     <div id="game-container">
         <div id="grid-container"></div>
+    </div>
+
+    <div>
+        <p>Moves: <span id="move-counter">0</span></p>
+        <button id="reset-btn">Reset</button>
     </div>
 
     <!-- Addendum Section -->
@@ -33,9 +36,12 @@
 
         <p>Through this project, I gained insights into <strong>efficient DOM manipulation with jQuery</strong>, <strong>CSS Grid layouts</strong>, and the importance of <strong>scalable design</strong>. I also learned that attention to small visual details, like shadows and rounded corners, significantly enhances the <strong>user experience</strong> and interface aesthetics.</p>
     </div>
+
+    <!-- JavaScript -->
     <footer>
         <p>Last Updated: 12/09/2024 22:52:33</p>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
