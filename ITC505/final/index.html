@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lights Out Game</h1>
+    <h1 id="game-title" class="bouncing-text">Lights Out Game</h1>
+
+
+    <div id="timer-container">
+        Time Remaining: <span id="timer">60</span> seconds
+    </div>
     <div id="controls">
-        <button class="grid-size-btn" data-size="3">Easy</button>
-        <button class="grid-size-btn" data-size="4">Medium</button>
-        <button class="grid-size-btn" data-size="5">Hard</button>
+        <button class="grid-size-btn" data-size="3" onclick="setTimeLimit(30)">Easy</button>
+        <button class="grid-size-btn" data-size="4" onclick="setTimeLimit(120)">Medium</button>
+        <button class="grid-size-btn" data-size="5" onclick="setTimeLimit(240)">Hard</button>
     </div>
     <div id="game-container">
         <div id="grid-container"></div>
@@ -24,17 +29,17 @@
 
     <!-- Addendum Section -->
     <div id="addendum">
-        <h2>📜 Addendum: Process and Creative Choices</h2>
-        <p><strong>Process:</strong></p>
-        <p>The goal was to create a <strong>Lights Out game</strong> using HTML, CSS, and jQuery. I started by setting up the HTML structure, including the grid container and control buttons to change grid size and reset the game. I then styled the grid cells with a transparent, card-like effect using <code>rgba</code> colors and <code>box-shadow</code> for a subtle depth.</p>
+        <h2 class="crazy-text">📜 Addendum: Process and Creative Choices</h2>
+        <p class="crazy-text"><strong>Process:</strong></p>
+        <p class="crazy-text">The goal was to create a <strong>Lights Out game</strong> using HTML, CSS, and jQuery. I started by setting up the HTML structure, including the grid container and control buttons to change grid size and reset the game. I then styled the grid cells with a transparent, card-like effect using <code>rgba</code> colors and <code>box-shadow</code> for a subtle depth.</p>
         
-        <p><strong>Creative Choices:</strong></p>
-        <p>I chose a <strong>transparent card effect</strong> for the grid cells to create a sleek, modern interface. The subtle <code>box-shadow</code> added a 3-dimensional appearance, enhancing the visual experience. Providing buttons to switch grid sizes (3x3, 4x4, and 5x5) made the game <strong>scalable and adaptable</strong>.</p>
+        <p class="crazy-text"><strong>Creative Choices:</strong></p>
+        <p class="crazy-text">I chose a <strong>transparent card effect</strong> for the grid cells to create a sleek, modern interface. The subtle <code>box-shadow</code> added a 3-dimensional appearance, enhancing the visual experience. Providing buttons to switch grid sizes (3x3, 4x4, and 5x5) made the game <strong>scalable and adaptable</strong>.</p>
 
-        <p><strong>Challenges and Insights:</strong></p>
-        <p>One challenge was accurately toggling neighboring cells, which I solved by calculating row and column indices with arithmetic operations. Maintaining a consistent visual appearance across different grid sizes required dynamic adjustments to <strong>CSS grid properties</strong>.</p>
+        <p class="crazy-text"><strong>Challenges and Insights:</strong></p>
+        <p class="crazy-text">One challenge was accurately toggling neighboring cells, which I solved by calculating row and column indices with arithmetic operations. Maintaining a consistent visual appearance across different grid sizes required dynamic adjustments to <strong>CSS grid properties</strong>.</p>
 
-        <p>Through this project, I gained insights into <strong>efficient DOM manipulation with jQuery</strong>, <strong>CSS Grid layouts</strong>, and the importance of <strong>scalable design</strong>. I also learned that attention to small visual details, like shadows and rounded corners, significantly enhances the <strong>user experience</strong> and interface aesthetics.</p>
+        <p class="crazy-text">Through this project, I gained insights into <strong>efficient DOM manipulation with jQuery</strong>, <strong>CSS Grid layouts</strong>, and the importance of <strong>scalable design</strong>. I also learned that attention to small visual details, like shadows and rounded corners, significantly enhances the <strong>user experience</strong> and interface aesthetics.</p>
     </div>
 
     <!-- JavaScript -->
