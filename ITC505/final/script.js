@@ -20,6 +20,8 @@ $(document).ready(function () {
                 .attr('data-id', i);
             gridContainer.append(button);
         }
+
+        randomizeBoard(); // Randomize the starting configuration
     };
 
     // Toggle light state
@@ -57,6 +59,7 @@ $(document).ready(function () {
         $('#move-counter').text(moves);
         checkWin();
     });
+
     // Reset the grid and restart the timer
     $('#reset-btn').on('click', function () {
         moves = 0;
@@ -103,15 +106,15 @@ $(document).ready(function () {
         }, 1000);
     };
 
+    // Randomize starting configuration
+    const randomizeBoard = () => {
+        for (let i = 0; i < gridSize * 2; i++) {
+            const randomIndex = Math.floor(Math.random() * (gridSize * gridSize));
+            toggleNeighbours(randomIndex);
+        }
+    };
+
     // Initialize the game
     createGrid();
     startTimer(); // Start timer on load
-
-    // Attach setTimeLimit function to global scope for button click handlers
-    window.setTimeLimit = setTimeLimit;
-});
-
-// Toggle Crazy Effect on Button Click
-$('#toggle-crazy-btn').on('click', function () {
-    $('#game-title').toggleClass('crazy-text');
 });
